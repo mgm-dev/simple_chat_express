@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const ROOM_ID = '<%= roomId %>';
+      const USER_NAME = '<%= userName%>';
+      console.log(ROOM_ID);
+    </script>
+    <script
+      defer
+      src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"
+    ></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="video-grid" class="grid-off"></div>
+      <div id="video-footer">
+        <button>copy roomID</button>
+        <button>exit</button>
+      </div>
+      <div id="chat">
+        <div id="chat-header">💬 Chat</div>
+        <textarea id="chat-log" readonly></textarea>
+        <form id="chat-form" autocomplete="off">
+          <input
+            id="chat-input"
+            type="text"
+            class="text"
+            placeholder="send message"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
