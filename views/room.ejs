@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script>
       const ROOM_ID = '<%= roomId %>';
       const USER_NAME = '<%= userName%>';
@@ -22,8 +26,14 @@
     <div id="container">
       <div id="video-grid" class="grid-off"></div>
       <div id="video-footer">
-        <button>copy roomID</button>
-        <button>exit</button>
+        <i
+          onclick="copyToClipboard(ROOM_ID)"
+          class="fa fa-clipboard fa-2x"
+          aria-hidden="true"
+        ></i>
+        <a href="http://localhost:8000" target="_top">
+          <i class="fa fa-sign-out fa-2x"></i>
+        </a>
       </div>
       <div id="chat">
         <div id="chat-header">💬 Chat</div>

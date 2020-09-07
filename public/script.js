@@ -79,3 +79,7 @@ function addVideoStream(video, stream) {
     videoGrid.classList.add('grid-on');
   }
 }
+
+function copyToClipboard(text) {
+  window.prompt('Copy to clipboard: Ctrl+C, Enter', text);
+}
